@@ -1,3 +1,4 @@
+import android.content.Context;
 import android.os.CountDownTimer;
 import android.util.Log;
 
@@ -16,7 +17,10 @@ public class Timer {
 
     private static int NUMBER_OF_SONGS;
 
-    public static void setNewTimer(long songLength, int numSongs) {
+    private Context mContext;
+
+    public void setNewTimer(Context c, long songLength, int numSongs) {
+        mContext = c;
         try {
             SONG_INTERVAL = songLength;
             NUMBER_OF_SONGS = numSongs;
@@ -29,7 +33,7 @@ public class Timer {
 
     }
 
-    private static class CountDown extends CountDownTimer
+    private class CountDown extends CountDownTimer
     {
 
         public CountDown(long millisUntilFinished, long ticks)
@@ -48,7 +52,7 @@ public class Timer {
         }
     }
 
-    private static void startTimer(){
+    private void startTimer(){
         new CountDown(SONG_INTERVAL, TICKS);
 
     }
