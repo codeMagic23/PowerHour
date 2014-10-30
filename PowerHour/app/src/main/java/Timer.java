@@ -1,4 +1,5 @@
 import android.os.CountDownTimer;
+import android.util.Log;
 
 /**
  * Created by James on 10/30/2014.
@@ -7,6 +8,7 @@ import android.os.CountDownTimer;
  */
 public class Timer {
 
+    private static final String  TIMER_TAG = "Timer class";
     private static long SONG_INTERVAL = 60000;
     private static long TICKS = 1000;
     private static long TIME_LEFT_IN_SONG;
@@ -15,8 +17,14 @@ public class Timer {
     private static int NUMBER_OF_SONGS;
 
     public static void setNewTimer(long songLength, int numSongs) {
-        SONG_INTERVAL = songLength;
-        NUMBER_OF_SONGS = numSongs;
+        try {
+            SONG_INTERVAL = songLength;
+            NUMBER_OF_SONGS = numSongs;
+        } catch (NumberFormatException e) {
+            Log.d(TIMER_TAG, e.getMessage());
+            NUMBER_OF_SONGS = 1;
+        }
+
         startTimer();
 
     }
