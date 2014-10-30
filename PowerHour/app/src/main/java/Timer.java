@@ -30,10 +30,7 @@ public class Timer {
             else {
                 // will need to display some message here and null out the MediaPlayer
             }
-
-
         }
-
     }
 
     private void startTimer(){
