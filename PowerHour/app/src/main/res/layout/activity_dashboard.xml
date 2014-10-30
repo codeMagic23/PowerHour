@@ -35,7 +35,8 @@
         android:layout_height="wrap_content"
         android:hint="Duration to play songs"
         android:layout_below="@id/btn"
-        android:layout_toRightOf="@id/numSongsET"/>
+        android:layout_toRightOf="@id/numSongsET"
+        android:layout_marginLeft="50dp"/>
 
     <MediaController
         android:layout_width="match_parent"
