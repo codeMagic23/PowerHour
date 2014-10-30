@@ -29,6 +29,13 @@
         android:layout_height="wrap_content"
         android:hint="# of songs to play"
         android:layout_below="@id/btn"/>
+    <EditText
+        android:id="@+id/sessionTime"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:hint="# of songs to play"
+        android:layout_below="@id/btn"
+        android:layout_toRightOf="@id/numSongsET"/>
 
     <MediaController
         android:layout_width="match_parent"
