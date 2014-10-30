@@ -1,3 +1,5 @@
+import android.graphics.Bitmap;
+
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -18,6 +20,11 @@ public class NowPlaying {
     public String getSongName() {
         String title = currentList.get(0).toString();
         return title;
+    }
+
+    public Bitmap getAlbumCover() {
+        Bitmap bm = null;
+        return bm;
     }
 }
 
