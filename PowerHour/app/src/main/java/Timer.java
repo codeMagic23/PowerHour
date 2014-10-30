@@ -5,7 +5,7 @@ import android.os.CountDownTimer;
  */
 public class Timer {
 
-    private static long RESTART_TIME = 6000;
+    private static long RESTART_TIME = 60000;
     private static long TICKS = 1000;
     private static long TIME_LEFT_IN_SONG;
     private static boolean PLAY_NEXT = true;
