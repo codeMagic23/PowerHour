@@ -1,3 +1,5 @@
+package com.codemagic.powerhour;
+
 import android.content.Context;
 import android.os.CountDownTimer;
 import android.util.Log;
@@ -10,7 +12,7 @@ import android.widget.Toast;
  */
 public class Timer {
 
-    private static final String  TIMER_TAG = "Timer class";
+    private static final String  TIMER_TAG = "com.codemagic.powerhour.Timer class";
     private static long SONG_INTERVAL = 60000;
     private static long TICKS = 1000;
     private static long TIME_LEFT_IN_SONG;
@@ -55,7 +57,7 @@ public class Timer {
 
         public void onFinish(){
             if (PLAY_NEXT) {
-                Toast.makeText(mContext, "Timer has finished", Toast.LENGTH_SHORT);
+                Toast.makeText(mContext, "com.codemagic.powerhour.Timer has finished", Toast.LENGTH_SHORT);
                 startTimer();
             }
             else {

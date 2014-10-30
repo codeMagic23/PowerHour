@@ -1,3 +1,5 @@
+package com.codemagic.powerhour;
+
 import android.graphics.Bitmap;
 
 import java.util.ArrayList;

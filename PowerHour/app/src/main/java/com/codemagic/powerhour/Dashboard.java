@@ -21,6 +21,7 @@ public class Dashboard extends Activity {
     // method to start playing random songs -- maybe add timer info here
     public void startPlaying(View v) {
         Toast.makeText(v.getContext(), "Clicked!", Toast.LENGTH_SHORT).show();
+        Timer timer = new Timer(v.getContext());
     }
 
     // will save to the preferences or send directly to timer class
