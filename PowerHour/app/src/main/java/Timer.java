@@ -1,6 +1,7 @@
 import android.content.Context;
 import android.os.CountDownTimer;
 import android.util.Log;
+import android.widget.Toast;
 
 /**
  * Created by James on 10/30/2014.
@@ -40,10 +41,13 @@ public class Timer {
         {
             super(millisUntilFinished, ticks);
         }
-        public void onTick(long millisUntilFinished){}
+        public void onTick(long millisUntilFinished){
+            Toast.makeText(mContext, "Ticks left: " + millisUntilFinished/1000, Toast.LENGTH_SHORT).show();
+        }
 
         public void onFinish(){
             if (PLAY_NEXT) {
+                Toast.makeText(mContext, "Timer has finished", Toast.LENGTH_SHORT);
                 startTimer();
             }
             else {
