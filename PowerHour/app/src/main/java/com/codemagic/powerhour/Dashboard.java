@@ -10,15 +10,19 @@ import android.widget.Toast;
 
 public class Dashboard extends Activity {
 
+    Preferences myPrefs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+        myPrefs = new Preferences(this);
     }
 
     // method to start playing random songs -- maybe add timer info here
     public void startPlaying(View v) {
         Toast.makeText(v.getContext(), "Clicked!", Toast.LENGTH_SHORT).show();
+
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
