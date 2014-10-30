@@ -68,6 +68,6 @@ public class Timer {
     }
 
     private void startTimer(){
-        new CountDown(SONG_INTERVAL, TICKS);
+        new CountDown(SONG_INTERVAL, TICKS).start();
     }
 }
