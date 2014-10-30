@@ -27,6 +27,9 @@ public class Timer {
             if (PLAY_NEXT) {
                 startTimer();
             }
+            else {
+                // will need to display some message here and null out the MediaPlayer
+            }
 
 
         }
