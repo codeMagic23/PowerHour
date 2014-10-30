@@ -20,7 +20,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv"
         android:layout_centerHorizontal="true"
-        android:text="Begin"/>
+        android:text="Begin"
+        android:onClick="startPlaying"/>
 
     <MediaController
         android:layout_width="match_parent"
