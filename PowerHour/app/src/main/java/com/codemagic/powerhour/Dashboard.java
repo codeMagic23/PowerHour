@@ -25,8 +25,9 @@ public class Dashboard extends Activity {
 
     }
 
+    // will save to the preferences or send directly to timer class
     public void saveOpts(View v) {
-        
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
