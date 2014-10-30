@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 
 public class Dashboard extends Activity {
@@ -17,7 +18,7 @@ public class Dashboard extends Activity {
 
 
     public void startPlaying(View v) {
-
+        Toast.makeText(v.getContext(), "Clicked!", Toast.LENGTH_SHORT).show();
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
