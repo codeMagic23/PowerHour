@@ -8,6 +8,9 @@ import android.view.MenuItem;
 
 public class Dashboard extends Activity {
 
+    private static long RESTART_TIME = 6000;
+    private static long TIME_LEFT_IN_SONG;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
