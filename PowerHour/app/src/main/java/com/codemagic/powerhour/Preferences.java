@@ -20,6 +20,10 @@ public class Preferences extends Preference {
     }
 
     public void setNumberSongs(int numSongs) {
+
+    }
+
+    public void setLengthOfSession(long sessionTime) {
         
     }
 
