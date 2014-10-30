@@ -38,6 +38,15 @@
         android:layout_toRightOf="@id/numSongsET"
         android:layout_marginLeft="50dp"/>
 
+    <Button
+        android:id="@+id/prefsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sessionTime"
+        android:layout_centerHorizontal="true"
+        android:text="Save Options"
+        android:onClick="saveOpts"/>
+
     <MediaController
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
