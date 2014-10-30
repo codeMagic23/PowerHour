@@ -7,16 +7,21 @@ import android.os.CountDownTimer;
  */
 public class Timer {
 
-    private static long RESTART_TIME = 60000;
+    private static long SONG_INTERVAL = 60000;
     private static long TICKS = 1000;
     private static long TIME_LEFT_IN_SONG;
     private static boolean PLAY_NEXT = true;
 
-    public static void setNewTimer() {
+    private static int NUMBER_OF_SONGS;
+
+    public static void setNewTimer(long songLength, int numSongs) {
+        SONG_INTERVAL = songLength;
+        NUMBER_OF_SONGS = numSongs;
+        startTimer();
 
     }
 
-    private class CountDown extends CountDownTimer
+    private static class CountDown extends CountDownTimer
     {
 
         public CountDown(long millisUntilFinished, long ticks)
@@ -35,8 +40,8 @@ public class Timer {
         }
     }
 
-    private void startTimer(){
-        new CountDown(RESTART_TIME, TICKS);
+    private static void startTimer(){
+        new CountDown(SONG_INTERVAL, TICKS);
 
     }
 
