@@ -2,6 +2,8 @@ import android.os.CountDownTimer;
 
 /**
  * Created by James on 10/30/2014.
+ * Class to track time left,
+ * restart time
  */
 public class Timer {
 
