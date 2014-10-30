@@ -27,6 +27,7 @@ public class Dashboard extends Activity {
 
     // will save to the preferences or send directly to timer class
     public void saveOpts(View v) {
+        Toast.makeText(v.getContext(), "Options clicked", Toast.LENGTH_SHORT).show();
 
     }
     @Override
