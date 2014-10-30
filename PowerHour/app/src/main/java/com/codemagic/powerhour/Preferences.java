@@ -15,16 +15,19 @@ public class Preferences extends Preference {
         super(context);
     }
 
+    // amount of milliseconds each song should play
     public void setSongLength(long length) {
         // set the length here
     }
 
+    // user can choose to play a certain # of songs
     public void setNumberSongs(int numSongs) {
 
     }
 
+    // user can choose to play random songs for a certain amount of time
     public void setLengthOfSession(long sessionTime) {
-        
+
     }
 
 
