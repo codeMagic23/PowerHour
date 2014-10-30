@@ -16,7 +16,7 @@ public class Dashboard extends Activity {
         setContentView(R.layout.activity_dashboard);
     }
 
-
+    // method to start playing random songs -- maybe add timer info here
     public void startPlaying(View v) {
         Toast.makeText(v.getContext(), "Clicked!", Toast.LENGTH_SHORT).show();
     }
