@@ -21,6 +21,10 @@ public class Timer {
 
     private Context mContext;
 
+    public Timer(Context c) {
+        mContext = c;
+    }
+
     public void setNewTimer(Context c, long songLength, int numSongs) {
         mContext = c;
         try {
@@ -31,9 +35,7 @@ public class Timer {
             Log.d(TIMER_TAG, e.getMessage());
             NUMBER_OF_SONGS = 1;
         }
-
         startTimer();
-
     }
 
     private class CountDown extends CountDownTimer
@@ -65,7 +67,5 @@ public class Timer {
 
     private void startTimer(){
         new CountDown(SONG_INTERVAL, TICKS);
-
     }
-
 }
