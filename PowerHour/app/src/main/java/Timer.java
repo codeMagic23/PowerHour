@@ -15,6 +15,7 @@ public class Timer {
     private static long TICKS = 1000;
     private static long TIME_LEFT_IN_SONG;
     private static boolean PLAY_NEXT = true;
+    private static int SONGS_LEFT = 1;
 
     private static int NUMBER_OF_SONGS;
 
@@ -25,6 +26,7 @@ public class Timer {
         try {
             SONG_INTERVAL = songLength;
             NUMBER_OF_SONGS = numSongs;
+            SONGS_LEFT = NUMBER_OF_SONGS;
         } catch (NumberFormatException e) {
             Log.d(TIMER_TAG, e.getMessage());
             NUMBER_OF_SONGS = 1;
@@ -40,6 +42,10 @@ public class Timer {
         public CountDown(long millisUntilFinished, long ticks)
         {
             super(millisUntilFinished, ticks);
+            if (SONGS_LEFT > 0)
+                SONGS_LEFT -= 1;
+            else
+                PLAY_NEXT = false;
         }
         public void onTick(long millisUntilFinished){
             Toast.makeText(mContext, "Ticks left: " + millisUntilFinished/1000, Toast.LENGTH_SHORT).show();
