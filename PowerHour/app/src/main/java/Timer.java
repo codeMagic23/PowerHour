@@ -6,7 +6,9 @@ import android.os.CountDownTimer;
 public class Timer {
 
     private static long RESTART_TIME = 6000;
+    private static long TICKS = 1000;
     private static long TIME_LEFT_IN_SONG;
+    private static boolean PLAY_NEXT = true;
 
     public static void setNewTimer() {
 
@@ -22,8 +24,17 @@ public class Timer {
         public void onTick(long millisUntilFinished){}
 
         public void onFinish(){
+            if (PLAY_NEXT) {
+                startTimer();
+            }
+
 
         }
+
+    }
+
+    private void startTimer(){
+        new CountDown(RESTART_TIME, TICKS);
 
     }
 
