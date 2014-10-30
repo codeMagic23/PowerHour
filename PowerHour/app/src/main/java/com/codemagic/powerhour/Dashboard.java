@@ -21,15 +21,13 @@ public class Dashboard extends Activity {
     // method to start playing random songs -- maybe add timer info here
     public void startPlaying(View v) {
         Toast.makeText(v.getContext(), "Clicked!", Toast.LENGTH_SHORT).show();
-
-
     }
 
     // will save to the preferences or send directly to timer class
     public void saveOpts(View v) {
         Toast.makeText(v.getContext(), "Options clicked", Toast.LENGTH_SHORT).show();
-
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
