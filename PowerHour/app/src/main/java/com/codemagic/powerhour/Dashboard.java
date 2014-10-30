@@ -29,9 +29,9 @@ public class Dashboard extends Activity {
         EditText numSongsET = (EditText) findViewById(R.id.numSongsET);
         EditText lengthOfSongsET = (EditText) findViewById(R.id.sessionTime);
 
-        numSongs = (!"".equals(numSongsET)) ? Integer.parseInt(numSongsET.getText().toString())
+        numSongs = (!"".equals(numSongsET.getText().toString())) ? Integer.parseInt(numSongsET.getText().toString())
                                             : 3;
-        lenghtOfSession = (!"".equals(lengthOfSongsET)) ? Integer.parseInt(lengthOfSongsET.getText().toString())
+        lenghtOfSession = (!"".equals(lengthOfSongsET.getText().toString())) ? Integer.parseInt(lengthOfSongsET.getText().toString())
                                                         : 60000;
         Timer timer = new Timer(v.getContext());
         timer.setNewTimer(v.getContext(), lenghtOfSession, numSongs);
