@@ -5,12 +5,17 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 
 public class Dashboard extends Activity {
 
     Preferences myPrefs;
+
+    private int numSongs = 0;
+    private long lenghtOfSession;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,8 +26,15 @@ public class Dashboard extends Activity {
     // method to start playing random songs -- maybe add timer info here
     public void startPlaying(View v) {
         Toast.makeText(v.getContext(), "Clicked!", Toast.LENGTH_SHORT).show();
+        EditText numSongsET = (EditText) findViewById(R.id.numSongsET);
+        EditText lengthOfSongsET = (EditText) findViewById(R.id.sessionTime);
+
+        numSongs = (!"".equals(numSongsET)) ? Integer.parseInt(numSongsET.getText().toString())
+                                            : 3;
+        lenghtOfSession = (!"".equals(lengthOfSongsET)) ? Integer.parseInt(lengthOfSongsET.getText().toString())
+                                                        : 60000;
         Timer timer = new Timer(v.getContext());
-        timer.setNewTimer(v.getContext(), 6000, 3);
+        timer.setNewTimer(v.getContext(), lenghtOfSession, numSongs);
     }
 
     // will save to the preferences or send directly to timer class
