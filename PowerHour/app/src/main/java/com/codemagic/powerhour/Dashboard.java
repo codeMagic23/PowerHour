@@ -22,6 +22,7 @@ public class Dashboard extends Activity {
     public void startPlaying(View v) {
         Toast.makeText(v.getContext(), "Clicked!", Toast.LENGTH_SHORT).show();
         Timer timer = new Timer(v.getContext());
+        timer.setNewTimer(v.getContext(), 6000, 3);
     }
 
     // will save to the preferences or send directly to timer class
