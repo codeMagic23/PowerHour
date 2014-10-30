@@ -19,4 +19,9 @@ public class Preferences extends Preference {
         // set the length here
     }
 
+    public void setNumberSongs(int numSongs) {
+        
+    }
+
+
 }
