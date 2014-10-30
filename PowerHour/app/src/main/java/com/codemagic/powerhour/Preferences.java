@@ -14,4 +14,9 @@ public class Preferences extends Preference {
     public Preferences(Context context) {
         super(context);
     }
+
+    public void setSongLength(long length) {
+        // set the length here
+    }
+
 }
